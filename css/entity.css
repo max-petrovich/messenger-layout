@@ -1,0 +1,246 @@
+/* SPRITES */
+
+[class^="sprite-"],
+[class*=" sprite-"] {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  *margin-right: .3em;
+  line-height: 10px;
+  /*vertical-align: text-top;*/
+  background-image: url("../img/sprites.png");
+  background-position: 14px 14px;
+  background-repeat: no-repeat;
+}
+
+[class^="sprite-"]:last-child,
+[class*=" sprite-"]:last-child {
+  *margin-left: 0;
+}
+
+.sprite-like, .sprite-unlike {
+width:12px;
+height:12px;
+line-height: 12px;
+background-position: -5px -5px;
+}
+.sprite-like, .sprite-unlike:hover {
+background-position: -21px -5px;
+cursor: pointer;
+}
+
+.sprite-eye-open {
+width:18px;
+height:10px;
+background-position: -38px -7px;
+}
+.sprite-two-check--green {
+width:18px;
+height:10px;
+background-position: -61px -6px;
+}
+.sprite-check--blue {
+width:13px;
+height:10px;
+background-position: -85px -6px;
+}
+.sprite-triangl-warning--red {
+width:11px;
+height:10px;
+background-position: -103px -6px;
+}
+.sprite-clock--pink {
+width:11px;
+height:10px;
+background-position: -118px -6px;
+}
+.sprite-arrow-man--blue {
+width:12px;
+height:10px;
+background-position: -135px -6px;
+}
+.sprite-file {
+width:22px;
+height:22px;
+background-position: -3px -24px;
+}
+.sprite-cross {
+width:15px;
+height:15px;
+background-position: -30px -24px;
+}
+.sprite-skype {
+width:16px;
+height:16px;
+background-position: -48px -24px;
+}
+.sprite-user {
+width:9px;
+height:9px;
+background-position: -149px -7px;
+}
+.sprite-lock {
+width:8px;
+height:9px;
+background-position: -161px -7px;
+}
+/* ----------------------------- */
+
+/* ICONS */
+
+[class^="icon-"],
+[class*=" icon-"] {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  *margin-right: .3em;
+  line-height: 22px;
+  /*vertical-align: text-top;*/
+  background-image: url("../img/icons.png");
+  transition: background 0.3s ease, color 0.3s ease;
+-webkit-transition: background 0.3s ease, color 0.3s ease;
+}
+[class^="icon-"]:hover,
+[class*=" icon-"]:hover {
+background-image: url("../img/icons_dark.png");
+}
+
+[class^="icon-"]:last-child,
+[class*=" icon-"]:last-child {
+  *margin-left: 0;
+}
+
+.icon-clip {
+width:9px;
+background-position: -7px 0;
+}
+.icon-mic {
+width:13px;
+background-position: -27px 0;
+}
+.icon-photo {
+background-position: -44px 0;
+}
+.icon-emotion {
+background-position: -66px 0;
+}
+/* ----------------- */
+
+/* ICONS */
+
+[class^="navicon-"],
+[class*=" navicon-"] {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  *margin-right: .3em;
+  line-height: 44px;
+  /*vertical-align: text-top;*/
+  background-image: url("../img/navi_icons.png");
+  transition: background 0.3s ease, color 0.3s ease;
+-webkit-transition: background 0.3s ease, color 0.3s ease;
+}
+/*[class^="navicon-"]:hover,
+[class*=" navicon-"]:hover {
+background-image: url("../img/icons_dark.png");
+}*/
+
+[class^="navicon-"]:last-child,
+[class*=" navicon-"]:last-child {
+  *margin-left: 0;
+}
+
+.navicon-settings {
+background-position: 0 0;
+}
+.navicon-messages {
+background-position: -44px 0;
+}
+.navicon-contacts {
+background-position: -88px 0;
+}
+.navicon-groups {
+background-position: -132px 0;
+}
+.navicon-history {
+background-position: -176px 0;
+}
+.navicon-new-chat {
+background-position: -220px 0;
+}
+.navicon-call {
+background-position: -264px 0;
+}
+.navicon-list {
+background-position: -308px 0;
+}
+.navicon-favorite {
+background-position: -352px 0;
+}
+/* ----------------- */
+
+/* ------ BUTTONS ----- */
+.button_flat {
+font-size:12px;
+font-family: Verdana;
+border:0;
+display: inline-block;
+height:38px;
+padding:0 10px;
+cursor: pointer;
+transition: background 0.3s ease, color 0.3s ease;
+-webkit-transition: background 0.3s ease, color 0.3s ease;
+}
+
+.button_flat--blue {
+background: #63dcff;
+color:#096883;
+}
+.button_flat--blue:hover {
+background: #43b5d6;
+color:#fff;
+}
+.button_flat--darkblue {
+background: #1588ca;
+color:#fff;
+}
+.button_flat--darkblue:hover {
+background: #0a689e;
+color:#fff;
+}
+
+/* INFO MSG */
+.msg_round {
+display: block;
+font-size:9px;
+width:17px;
+height:17px;
+line-height: 17px;
+text-align:center;
+vertical-align: middle;
+border-radius: 50%;
+}
+.msg_round--orange {
+background: #ff8726;
+color:#fff;
+}
+.msg_round--red {
+background: #f35858;
+color:#fff;
+}
+/* USER ONLINE/OFFLINE STATUS */
+.user_status {
+display:inline-block;
+width:7px;
+height:7px;
+border-radius: 50%;
+}
+.user_status--online {
+background: #2eb83e;
+}
+.user_status--away {
+background: #ffd800;
+}
+.user_status--offline {
+background: #b2b2b2;
+}

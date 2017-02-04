@@ -1,0 +1,371 @@
+* {
+margin: 0;
+padding:0;
+}
+
+html, body {
+height:100%;
+max-height: 100%;
+position: relative;
+font-size:14px;
+font-weight: normal;
+font-family: 'Open Sans',Verdana, sans-serif;
+overflow: hidden;
+}
+
+
+.grid {
+/*width:960px;
+margin:0 auto;*/
+}
+
+.pull-left {
+float:left;
+}
+.pull-right {
+float:right;
+}
+
+/* For modern browsers */
+.clearfix:before,
+.clearfix:after {
+   content: "";
+   display: table;
+}
+.clearfix:after {
+   clear: both;
+}
+/* для IE6-7 */
+.clearfix {
+   zoom: 1;
+}
+
+
+table {
+border-spacing: 0px;
+border-collapse: separate;
+margin:0;
+padding:0;
+}
+.main {
+width:100%;
+height:100%;
+min-width: 998px;
+}
+
+.header_container {
+height:110px;
+vertical-align: top;
+}
+    .header_container .logo {
+    margin:35px 0 0 5px;
+    }
+    .header_container .slogan {
+    width:240px;
+    margin:36px 0 0 16px;
+    font-size:19px;
+    line-height:19px;
+    color:#ccc;
+    }
+
+    .header_container .auth {
+    margin:30px 5px 0 0;
+    }
+        .header_container .auth .auth_input_area {
+        position: relative;
+        width:128px;
+        border:1px solid #e6e6e6;
+        height:25px;
+        line-height: 25px;
+        padding:0 9px;
+        margin-right:5px;
+        }
+        .header_container .auth .auth_input_area input {
+        position: relative;
+        top:-1px;
+        width:112px;
+        height:16px;
+        margin-left:7px;
+        border:0;
+        outline: 0;
+        font-size: 12px;
+        }
+        .header_container .auth .auth_submit {
+        height:27px;
+        line-height:27px;
+        font-size:12px;
+        }
+    
+    .header_navi {
+    margin:18px 5px 0 0 ;
+    }
+    .header_navi ul{
+    font-size:0;
+    list-style-type: none;
+    }
+        .header_navi ul li {
+            display: inline;
+            margin-left:23px;
+        }
+            .header_navi ul li a {
+            font-size:12px;
+            color:#1588ca;
+            text-decoration:none;
+            text-transform: uppercase;
+            }
+            .header_navi ul li  a:hover, .header_navi ul li.current a{
+            color:#cc1a18;
+            }
+
+
+.header_navigation_container {
+height:46px;
+background: #f4f3f3;
+vertical-align: top;
+}
+.navigation {
+width:100%;
+display: table;
+list-style: none;
+text-align: center;
+}
+    .navigation li {
+    position: relative;
+    display: table-cell;
+    text-align: center;
+    height: 46px;
+    }
+    .navigation li a {
+    font-size:17px;
+    color:#1588ca;
+    text-decoration: none;
+    position: relative;
+    bottom:-1px;
+    }
+    .navigation li a {
+    display:block;
+    height:45px;
+    line-height: 43px;
+    }
+    .navigation li a:hover, .navigation li.current a {
+    background: #fff;
+    }
+    .navigation li .msg_round {
+    position: absolute;
+    top:8px;
+    z-index: 2;
+    }
+
+.content_container {
+vertical-align: top;
+}
+
+.content {
+height:100%;
+}
+
+.content_table {
+width:100%;
+height:100%;
+box-sizing:border-box;
+padding:22px 0 25px;
+}
+
+.content_table .content_navigation {
+position: relative;
+width:63px;
+background: #1588ca;
+vertical-align: top;
+border-top:1px solid #33acf3;
+}
+.content_table .content_navigation .navigation_links {
+list-style-type: none;
+}
+.content_table .content_navigation .navigation_links li {
+position: relative;
+}
+.content_table .content_navigation .navigation_links li .msg_round {
+position: absolute;
+top:7px;
+right:4px;
+}
+.content_table .content_navigation .navigation_links a{
+display:block;
+width:100%;
+height:62px;
+margin:0 auto;
+border-top:1px solid transparent;
+border-bottom:1px solid transparent;
+text-align: center;
+}
+.content_table .content_navigation .navigation_links a i {
+margin:10px auto;
+}
+.content_table .content_navigation .navigation_links a:hover {
+background: #1ba0ed;
+border-top:1px solid #33acf3;
+border-bottom:1px solid #33acf3;
+}
+
+.content_table .content_navigation .content_navigation_bottom_bar {
+position: absolute;
+bottom:0;
+width:100%;
+}
+.content_table .content_navigation .content_navigation_bottom_bar_height {
+height:85px;
+}
+.content_table .content_navigation .content_navigation_bottom_bar .navigation_links a {
+border:0;
+}
+.content_table .content_navigation .content_navigation_bottom_bar .user_account {
+color:#fff;
+font-size:12px;
+font-family: Verdana;
+padding-bottom:8px;
+border-bottom:1px solid #25a8f3;
+margin:0 4px;
+text-align: center;
+}
+
+/* CONACTS // GROUPS */
+.content_table .content_lsidebar {
+width:221px;
+height:100%;
+overflow: auto;
+overflow-x:hidden;
+background: #f5f5f5;
+vertical-align: top;
+border-top:1px solid #ebebeb;
+}
+
+.contacts_block .contacts_list {
+list-style-type: none;
+}
+.contacts_block .contacts_list li {
+position: relative;
+}
+.contacts_block .contacts_list .user_status {
+position: absolute;
+top:6px;
+left:6px;
+}
+.contacts_block .contacts_list .msg_round {
+position: absolute;
+top:6px;
+left:43px;
+}
+.contacts_block .contacts_list .skype-link {
+position: absolute;
+top:23px;
+right:10px;
+}
+.contacts_block .contacts_list .user_contact {
+display:block;
+height:64px;
+font-size: 0;
+text-decoration: none;
+}
+.contacts_block .contacts_list .user_contact:hover, .contacts_block .contacts_list .user_contact.current {
+background: #fff;
+}
+.contacts_block .contacts_list .data {
+height:64px;
+margin:0 10px;
+border-bottom:1px solid #e1e1e1;
+}
+.contacts_block .contacts_list .data .user_photo {
+width:44px;
+height:44px;
+overflow: hidden;
+padding-top:10px;
+}
+    .contacts_block .contacts_list .data .user_photo img {
+    max-width:44px;
+    max-height:44px;
+    border-radius: 50%;
+    }
+.contacts_block .contacts_list .data .user_info {
+margin-left:10px;
+}
+.contacts_block .contacts_list .data .user_info .username {
+font-size:17px;
+line-height: 1;
+color:#383838;
+margin-top:23px;
+white-space: nowrap;
+width:145px;
+}
+.contacts_block .contacts_list .data .user_info .contact_user_status {
+font-size:10px;
+line-height: 10px;
+color:#bdbdbd;
+}
+.contacts_block .contacts_list .contact_exist_msgs .username{
+color:#ff7e00 !important;
+}
+
+.content_block {
+border-top:1px solid #f7f7f7;
+vertical-align: top;
+}
+
+/* ----------- GROUPS ----------- */
+.group_content_container {
+/*margin:20px 10px 0 10px;*/
+margin-left:10px;
+height:100%;
+overflow: auto;
+min-height: 100px;
+}
+.group_content_user_block {
+width:149px;
+overflow: hidden;
+padding:20px 10px;
+border-bottom:1px solid #f9f9f9;
+border-right:1px solid #f9f9f9;
+float:left;
+}
+.group_content_user_block .image {
+background: #f2f2f2;
+font-size:0;
+}
+.group_content_user_block .user_name {
+text-align:center;
+margin-top:10px;
+line-height: 1;
+}
+    .group_content_user_block .user_name .user_status {
+    position: relative;
+    top:-2px;
+    margin-right:7px;
+    }
+    .group_content_user_block .user_name span {
+    font-size:17px;
+    white-space:nowrap;
+    overflow: hidden;
+    }
+
+.group_content_user_block .user_location {
+position: relative;
+text-align:center;
+margin-top:9px;
+height:16px;
+line-height: 1;
+}
+    .group_content_user_block .user_location span {
+    padding-left:10px;
+    position: relative;
+    top:-4px;
+    font-size:10px;
+    color:#a1a9ad;
+    white-space:nowrap;
+    overflow: hidden;
+    }
+/*=================================*/
+
+
+.footer_container {
+height:40px;
+background: #f7f7f7 url(../img/footer_bg.png) top repeat-x;
+}

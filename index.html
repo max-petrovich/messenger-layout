@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Web Messenger</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:700,400&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <script src="js/autosize.min.js"></script>
+    <script src="js/common.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="css/entity.css" />
+    <link rel="stylesheet" type="text/css" href="css/chatbox.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+
+    <table class="main">
+        <tr>
+            <td class="header_container">
+                <div class="grid">
+                    <div class="logo pull-left">
+                        <a href=""><img src="img/logo.png" /></a>
+                    </div>
+                    <div class="slogan pull-left">
+                        Откроем увлекательный мир отеля вместе
+                    </div>
+                    <div class="pull-right">
+                        <div class="auth clearfix">
+                            <form action="" method="post" class="pull-right">
+                                <div class="auth_input_area pull-left"><i class="sprite-user"></i><input type="text" name="login" placeholder="логин" /></div>
+                                <div class="auth_input_area pull-left"><i class="sprite-lock"></i><input type="password" name="password" placeholder="пароль" /></div>
+                                <button type="submit" class="auth_submit button_flat button_flat--darkblue">войти</button>
+                            </form>
+                        </div>
+                        <div class="header_navi clearfix">
+                            <ul>
+                                <li><a href="">Главная</a></li>
+                                <li class="current"><a href="">Презентации</a></li>
+                                <li><a href="">Гостям</a></li>
+                                <li><a href="">Отелям</a></li>
+                                <li><a href="">Новости и события</a></li>
+                                <li><a href="">Контакты</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="header_navigation_container">
+                <div class="grid">
+                    <ul class="navigation" id="navigation">
+                        <li><a href="">Пользователь</a></li>
+                        <li><a href="">Отель</a></li>
+                        <li><a href="">Объекты</a></li>
+                        <li><a href="">Услуги</a></li>
+                        <li><a href="">События</a></li>
+                        <li><a href="">Должности</a></li>
+                        <li class="current"><div class="msg_round msg_round--red">12</div><a href="">Сообщения</a></li>
+                        <li><a href="" id="debug_SCROLL_CHAT">SCROLL</a></li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="content_container">
+                <table class="content_table grid">
+                    <tr>
+                        <td class="content_navigation">
+                            <ul class="navigation_links">
+                                <li><div class="msg_round msg_round--orange">2</div><a href=""><i class="navicon-messages"></i></a></li>
+                                <li><a href=""><i class="navicon-contacts"></i></a></li>
+                                <li><a href=""><i class="navicon-groups"></i></a></li>
+                                <li><a href=""><i class="navicon-history"></i></a></li>
+                                <li><a href=""><i class="navicon-new-chat"></i></a></li>
+                                <li><a href=""><i class="navicon-call"></i></a></li>
+                                <li><a href=""><i class="navicon-list"></i></a></li>
+                                <li><a href=""><i class="navicon-favorite"></i></a></li>
+                            </ul>
+                            <div class="content_navigation_bottom_bar_height"></div>
+                            
+                            <div class="content_navigation_bottom_bar">
+                                <div class="user_account">$32.55</div>
+                                <ul class="navigation_links">
+                                    <li><a href=""><i class="navicon-settings"></i></a></li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td class="content_lsidebar">
+                            <div class="contacts_block content_blockScroll niceScroll">
+                                <ul class="contacts_list">
+                                    <li><div class="user_status user_status--online"></div>
+                                        <a href="" class="user_contact">
+                                            <div class="data">
+                                                <div class="user_photo pull-left"><img src="img/noavatar.png" alt="" /></div>
+                                                <div class="user_info pull-left">
+                                                    <div class="username">Jason Statham</div>
+                                                </div>
+                                            </div>  
+                                        </a>
+                                    </li>
+                                    <li><div class="user_status user_status--online"></div>
+                                        <div class="msg_round msg_round--orange">2</div>
+                                        <a href="" class="user_contact contact_exist_msgs">
+                                            <div class="data">
+                                                <div class="user_photo pull-left"><img src="uploads/user/photo/statham.png" alt="" /></div>
+                                                <div class="user_info pull-left">
+                                                    <div class="username">Angelina Jolie</div>
+                                                </div>
+                                            </div>  
+                                        </a>
+                                    </li>
+                                    <li><div class="user_status user_status--online"></div>
+                                        <a href="" class="user_contact current">
+                                            <div class="data">
+                                                <div class="user_photo pull-left"><img src="uploads/user/photo/statham.png" alt="" /></div>
+                                                <div class="user_info pull-left">
+                                                    <div class="username">Brad Pitt</div>
+                                                    <div class="contact_user_status">печатает...</div>
+                                                </div>
+                                            </div>  
+                                        </a>
+                                    </li>
+                                    <li><div class="user_status user_status--away"></div>
+                                        <div class="skype-link"><a href="skype:maxic_unrelax"><i class="sprite-skype"></i></a></div>
+                                        <a href="" class="user_contact">
+                                            <div class="data">
+                                                <div class="user_photo pull-left"><img src="uploads/user/photo/statham.png" alt="" /></div>
+                                                <div class="user_info pull-left">
+                                                    <div class="username">Jackie Chan</div>
+                                                </div>
+                                            </div>  
+                                        </a>
+                                    </li>
+                                    <li><div class="user_status user_status--offline"></div>
+                                        <a href="" class="user_contact">
+                                            <div class="data">
+                                                <div class="user_photo pull-left"><img src="uploads/user/photo/statham.png" alt="" /></div>
+                                                <div class="user_info pull-left">
+                                                    <div class="username">Unknown User</div>
+                                                </div>
+                                            </div>  
+                                        </a>
+                                    </li>
+                                    <li><div class="user_status user_status--online"></div>
+                                        <a href="" class="user_contact">
+                                            <div class="data">
+                                                <div class="user_photo pull-left"><img src="uploads/user/photo/statham.png" alt="" /></div>
+                                                <div class="user_info pull-left">
+                                                    <div class="username">Group name</div>
+                                                </div>
+                                            </div>  
+                                        </a>
+                                    </li>
+                                    <li><div class="user_status user_status--online"></div>
+                                        <a href="" class="user_contact">
+                                            <div class="data">
+                                                <div class="user_photo pull-left"><img src="uploads/user/photo/statham.png" alt="" /></div>
+                                                <div class="user_info pull-left">
+                                                    <div class="username">Jason Statham</div>
+                                                </div>
+                                            </div>  
+                                        </a>
+                                    </li>
+                                    <li><div class="user_status user_status--online"></div>
+                                        <div class="msg_round msg_round--orange">2</div>
+                                        <a href="" class="user_contact contact_exist_msgs">
+                                            <div class="data">
+                                                <div class="user_photo pull-left"><img src="uploads/user/photo/statham.png" alt="" /></div>
+                                                <div class="user_info pull-left">
+                                                    <div class="username">Angelina Jolie</div>
+                                                </div>
+                                            </div>  
+                                        </a>
+                                    </li>
+                                    <li><div class="user_status user_status--online"></div>
+                                        <a href="" class="user_contact current">
+                                            <div class="data">
+                                                <div class="user_photo pull-left"><img src="uploads/user/photo/statham.png" alt="" /></div>
+                                                <div class="user_info pull-left">
+                                                    <div class="username">Brad Pitt</div>
+                                                    <div class="contact_user_status">печатает...</div>
+                                                </div>
+                                            </div>  
+                                        </a>
+                                    </li>
+                                    <li><div class="user_status user_status--away"></div>
+                                        <div class="skype-link"><a href="skype:maxic_unrelax"><i class="sprite-skype"></i></a></div>
+                                        <a href="" class="user_contact">
+                                            <div class="data">
+                                                <div class="user_photo pull-left"><img src="uploads/user/photo/statham.png" alt="" /></div>
+                                                <div class="user_info pull-left">
+                                                    <div class="username">Jackie Chan</div>
+                                                </div>
+                                            </div>  
+                                        </a>
+                                    </li>
+                                    <li><div class="user_status user_status--offline"></div>
+                                        <a href="" class="user_contact">
+                                            <div class="data">
+                                                <div class="user_photo pull-left"><img src="uploads/user/photo/statham.png" alt="" /></div>
+                                                <div class="user_info pull-left">
+                                                    <div class="username">Unknown User</div>
+                                                </div>
+                                            </div>  
+                                        </a>
+                                    </li>
+                                    <li><div class="user_status user_status--online"></div>
+                                        <a href="" class="user_contact">
+                                            <div class="data">
+                                                <div class="user_photo pull-left"><img src="uploads/user/photo/statham.png" alt="" /></div>
+                                                <div class="user_info pull-left">
+                                                    <div class="username">Group name</div>
+                                                </div>
+                                            </div>  
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td class="content_block">
+                            <table class="chatbox">
+                                <tr>
+                                    <td class="chatbox_top_panel">TOPPANEL</td>
+                                </tr>
+                                <tr>
+                                    <td class="chatbox_chat">
+                                        <div class="chatbox_chat_messages content_blockScroll niceScroll">
+                                            
+                                            <div class="chatbox_chat_message clearfix">
+                                                <div class="chatbox_chat_message--rtl">
+                                                    <table>
+                                                        <tr>
+                                                            <td class="info">
+                                                                <div class="sendtime">15:45</div>
+                                                            </td>
+                                                            <td class="message"><div class="text">Привет. всё печально. Скинь какую-нибудь картинку...</div></td>
+                                                            <td class="user_photo"><a href=""><img src="uploads/user/photo/2.png" alt="" /></a></td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            
+                                            
+                                            <div class="chatbox_chat_timelime"><span>16 декабря 2014</span></div>
+                                            
+                                            <div class="chatbox_chat_message clearfix">
+                                                <div class="chatbox_chat_message--ltl">
+                                                    <table>
+                                                        <tr>
+                                                            <td class="user_photo"><a href=""><img src="uploads/user/photo/1.png" alt="" /></a></td>
+                                                            <td class="message"><div class="text">Ща сделаю</div></td>
+                                                            <td class="info">
+                                                                <div class="sendtime">15:51 <i class="sprite-clock--pink"></i></div>
+                                                                <div class="sendstatus sendstatus--sending">Отправляется</div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <div class="like">
+                                                        <i class="sprite-like"></i><span class="like_count">3</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="chatbox_chat_message clearfix">
+                                                <div class="chatbox_chat_message--ltl">
+                                                    <table>
+                                                        <tr>
+                                                            <td class="user_photo"><a href=""><img src="uploads/user/photo/1.png" alt="" /></a></td>
+                                                            <td class="message"><div class="image"><a href=""><img src="uploads/user/images/image1.jpg" alt=""></a></div></td>
+                                                            <td class="info info--bottom">
+                                                                <div class="sendtime">15:53 <i class="sprite-triangl-warning--red"></i></div>
+                                                                <div class="sendstatus sendstatus--error">Не отправлено</div>
+                                                                <div class="file">
+                                                                    <div class="file_name"><i class="sprite-file"></i> <span>hotelface.jpg</span></div>
+                                                                    <div class="progress">
+                                                                        <div class="progress_text">Идет скачивание</div>
+                                                                        <div class="progress_bar"><div class="progress_bar_value" style="width:60%"></div></div>
+                                                                        <div class="progress_fileinfo">12 Мб/23 Мб</div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="chatbox_chat_message clearfix">
+                                                <div class="chatbox_chat_message--rtl">
+                                                    <table>
+                                                        <tr>
+                                                            <td class="check"><input type="checkbox" name="check" checked /></td>
+                                                            <td class="info">
+                                                                <div class="sendtime"><i class="sprite-check--blue"></i> 15:55</div>
+                                                                <div class="sendstatus sendstatus--ok">Отправлено</div>
+                                                            </td>
+                                                            <td class="message"><div class="text">Лалал какая-то. Не пиши мне больше никогда!!!</div></td>
+                                                            <td class="user_photo"><a href=""><img src="uploads/user/photo/2.png" alt="" /></a></td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="chatbox_chat_message clearfix">
+                                                <div class="chatbox_chat_message--ltl">
+                                                    <table>
+                                                        <tr>
+                                                            <td class="user_photo"><a href=""><img src="uploads/user/photo/1.png" alt="" /></a></td>
+                                                            <td class="message"><div class="text">Смотрела фильм «Троя», норм фильм? А то жена говорит, что не интересный.</div></td>
+                                                            <td class="info">
+                                                                <div class="sendtime">15:56 <i class="sprite-two-check--green"></i></div>
+                                                                <div class="sendstatus sendstatus--ok">Доставлено</div>
+                                                            </td>
+                                                            <td class="check"><input type="checkbox" name="check" /></td>
+                                                        </tr>
+                                                    </table>
+                                                    <div class="like like--unliked">
+                                                        <i class="sprite-unlike"></i><span class="like_count">3</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="chatbox_chat_message clearfix">
+                                                <div class="chatbox_chat_message--ltl">
+                                                    <table>
+                                                        <tr>
+                                                            <td class="user_photo"><a href=""><img src="uploads/user/photo/1.png" alt="" /></a></td>
+                                                            <td class="message"><div class="text">Чего молчишь?</div></td>
+                                                            <td class="info">
+                                                                <div class="sendtime">17:25 <i class="sprite-eye-open"></i></div>
+                                                                <div class="sendstatus sendstatus--ok">Просмотрено</div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <div class="like like--unliked">
+                                                        <i class="sprite-unlike"></i><span class="like_count"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="chatbox_chat_message clearfix">
+                                                <div class="chatbox_chat_message--rtl">
+                                                    <table>
+                                                        <tr>
+                                                            <td class="info">
+                                                                <div class="sendtime"> 17:33</div>
+                                                                <div class="sendstatus sendstatus--ok"><i class="sprite-arrow-man--blue"></i> Переадресовано</div>
+                                                            </td>
+                                                            <td class="message"><div class="text">Та так себе. На один раз.</div></td>
+                                                            <td class="user_photo"><a href=""><img src="uploads/user/photo/2.png" alt="" /></a></td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="chatbox_chat_infomsg chatbox_chat_infomsg--red">Пропущенный вызов в 12:25</div>
+                                            <div class="chatbox_chat_infomsg chatbox_chat_infomsg--gray">Отмененный вызов в 12:37</div>
+                                            <div class="chatbox_chat_infomsg chatbox_chat_infomsg--turquoise">Длительность вызова 1:42</div>
+                                            
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="chatbox_form">
+                                        <div class="chatbox_form_topbar clearfix">
+                                            <div class="status-message pull-left">Egor Lapin печатает....</div>
+                                            <div class="quick-answer pull-right"><a href="">+ Быстрый ответ</a></div>
+                                        </div>
+                                        <div class="type-place">
+                                            <textarea placeholder="Текст Вашего сообщения..." class="type_place_text_in textarea_autosize" id="chatbox_form_text_in">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took  a galley of type and scrambled it to make a type specimen book. It has survived not</textarea>
+                                            <div class="type_place_bottom_bar clearfix">
+                                                <div class="pull-right"><a href="" title="Очистить"><i class="sprite-cross"></i></a></div>
+                                            </div>
+                                        </div>
+                                        <div class="chatbox_form_bottom_bar clearfix">
+                                            <div class="form_attachments pull-left"><a href="" title="Прикрепить"><i class="icon-clip"></i></a><a href="" title="Записать голос"><i class="icon-mic"></i></a><a href="" title="Фотография"><i class="icon-photo"></i></a><a href="" title="Смайл"><i class="icon-emotion"></i></a></div>
+                                            <div class="pull-right"><button class="button_flat button_flat--blue">Отправить</button></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="footer_container">
+                <div class="grid">FOOTER</div>
+            </td>
+        </tr>
+    </table>
+    
+</body>
+</html>
